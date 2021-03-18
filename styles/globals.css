@@ -1,4 +1,16 @@
-html,
+/* Including tailwind */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	a {
+		@apply text-blue-700 hover:text-blue-400;
+	}
+}
+
+/*html,
 body {
   padding: 0;
   margin: 0;
@@ -14,3 +26,4 @@ a {
 * {
   box-sizing: border-box;
 }
+*/

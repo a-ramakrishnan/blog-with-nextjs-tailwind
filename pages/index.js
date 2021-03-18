@@ -10,24 +10,25 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 
-			<main>
-				<h1>Mavericks Blog</h1>
-			</main>
-
-			<div>
+			<div className='space-y-6'>
 				{blogPosts.map((post) => (
-					<div key={post.slug}>
-						<div>
-							<Link href={`/blog/${post.slug}`}>
-								<h2>{post.title}</h2>
-							</Link>
-						</div>
-						<div>
-							<p>{post.date}</p> <p>{post.content}</p>
-						</div>
-					</div>
+					<BlogListItems key={post.slug} {...post} />
 				))}
 			</div>
+		</div>
+	);
+}
+
+function BlogListItems({ title, date, slug, content }) {
+	return (
+		<div className='border border-gray-200 shadow hover:shadow-md hover:border-gray-700 rounded-md p-4 transition duration-200 ease-in-out'>
+			<div className='pb-4'>
+				<Link href={`/blog/${slug}`}>
+					<a className='text-lg text-black'>{title}</a>
+				</Link>
+			</div>
+			<div className='text-gray-500 pb-2 text-xs'>{date}</div>
+			<div className='text-gray-800 pb-2 text-l'>{content}</div>
 		</div>
 	);
 }
