@@ -5,9 +5,11 @@ import { blogPosts } from '../lib/data';
 export default function BlogPage({ title, date, slug, content }) {
 	return (
 		<div className='mb-4 mt-4 shadow hover:shadow-lg hover:border-black rounded-md p-4'>
-			<h2 className='pb-4 text-xl font-bold'>{title}</h2>
+			<h2 className='font-mono pb-4 text-xl font-bold'>{title}</h2>
 			<div className='text-gray-500 pb-4 text-xs'>{date}</div>
-			<div className='text-gray-800 pb-2 text-md'>{content}</div>
+			<div className='font-sans text-gray-800 pb-2 text-md'>
+				{content}
+			</div>
 
 			<div class='flex space-x-3 mt-4 mb-4 text-sm font-medium'>
 				<div class='flex-auto flex space-x-3'>

@@ -24,11 +24,11 @@ function BlogListItems({ title, date, slug, content }) {
 		<div className='border border-gray-200 shadow hover:shadow-md hover:border-gray-700 rounded-md p-4 transition duration-200 ease-in-out'>
 			<div className='pb-4'>
 				<Link href={`/blog/${slug}`}>
-					<a className='text-lg text-black'>{title}</a>
+					<a className='text-lg text-black font-mono'>{title}</a>
 				</Link>
 			</div>
 			<div className='text-gray-500 pb-2 text-xs'>{date}</div>
-			<div className='text-gray-800 pb-2 text-l'>{content}</div>
+			<div className='text-gray-800 font-sans pb-2 text-l'>{content}</div>
 		</div>
 	);
 }
